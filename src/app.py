@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from Recommendation import load_data, recommend_movies
+from .Recommendation import load_data, recommend_movies
+
 import sys
 print(sys.path)
 app = Flask(__name__)
