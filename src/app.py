@@ -8,6 +8,10 @@ app = Flask(__name__)
 
 app.config['WTF_CSRF_ENABLED'] = False
 
+@app.route('/')
+def home():
+    return "Welcome to the Movie Recommendation System!"
+
 
 # Load data
 movies_with_ratings = load_data()
