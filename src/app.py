@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from Recommendation import load_data, recommend_movies
-
-
+import sys
+print(sys.path)
 app = Flask(__name__)
 
 app.config['WTF_CSRF_ENABLED'] = False
@@ -27,3 +27,4 @@ def recommend():
 if __name__ == '__main__':
     CORS(app)
     app.run(debug=False)
+    
