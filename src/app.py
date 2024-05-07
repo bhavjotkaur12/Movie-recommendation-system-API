@@ -32,7 +32,6 @@ def home():
 movies_with_ratings = load_data()
 
 @app.route('/recommend', methods=['POST'])
-@app.route('/recommend', methods=['POST'])
 def recommend():
     # Access form data instead of JSON
     genres = request.form.get('genres', '').split(',')
